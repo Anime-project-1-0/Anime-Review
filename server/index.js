@@ -16,7 +16,17 @@ app.use((req, res, next) => {
   next();
 });
 
+app.post('/api/anime',(req,res)=>{
+  Anime(req.body).save().then((g)=>res.json(g))
+})
 
+app.get('/api/anime', function(req, res) {
+  Anime.find().then( results => {
+    res.json(results);
+    
+  }).catch(err => console.log(err)) 
+
+});
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

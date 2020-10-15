@@ -10,14 +10,19 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      view: 'feed'
+      view: 'feed',
+      data : []
     }
 
     this.changeView = this.changeView.bind(this);
   }
 
   componentDidMount(){
-    $.ajax({})
+    var that = this;
+$.get('/api/anime', function(data){
+  console.log(data)
+that.setState({data : data})
+})
   }
 
   changeView(option) {
@@ -30,7 +35,7 @@ class App extends React.Component {
     const {view} = this.state;
 
     if (view === 'feed') {
-      return <Feed handleClick={() => this.changeView('anypostview')}/>
+      return <Feed handleClick={() => this.changeView('anypostview')}  anime={this.state.data}/>
     }     else if(view === 'admin') {
       return <Admin/>
     }  

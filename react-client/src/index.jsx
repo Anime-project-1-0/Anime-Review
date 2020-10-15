@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-
+import Admin from './components/admin.jsx';
 import Post from './components/Post.jsx';
 import Feed from './components/Feed.jsx';
 
@@ -31,7 +31,10 @@ class App extends React.Component {
 
     if (view === 'feed') {
       return <Feed handleClick={() => this.changeView('anypostview')}/>
-    } else {
+    }     else if(view === 'admin') {
+      return <Admin/>
+    }  
+    else {
       return <Post />
     }
   }
@@ -49,10 +52,7 @@ class App extends React.Component {
             onClick={() => this.changeView('feed')}>
             See all Posts
           </span>
-          <span className="nav-unselected">
-            Write a Post
-          </span>
-          <span className="nav-unselected">
+          <span className="nav-unselected" onClick={() => this.changeView('admin')}>
             Admin
           </span>
         </div>

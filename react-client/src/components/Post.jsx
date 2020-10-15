@@ -9,7 +9,7 @@ render() {
 return (
   <div className="post">
     <h1 className="post-title">This is a Hardcoded Blog Post Component</h1>
-    <i className="fa fa-thumbs-up"></i>  25  <i className="fa fa-thumbs-down"></i> 15
+    <i className="fa fa-thumbs-up"></i>  20  <i className="fa fa-thumbs-down"></i> 15
     <div className="post-byline"><span className="post-byline-author">Ferd Zerding</span> 14 hours ago</div>
     <img src="http://placecorgi.com/800/450" className="post-image"/>
     <p>This component displays a hard-coded blog post, intended to show you the desired layout of the Post component. You should refactor this component so it dynamically renders actual blog posts. You can use the provided sample data to get started, then eventually switch to data from the database. In order to make this look a little more like our eventual posts, here are a few more paragraphs of lorem ipsum filler text.</p>

@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Post = (props) => (
+class Post extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+render() {
+return (
   <div className="post">
     <h1 className="post-title">This is a Hardcoded Blog Post Component</h1>
     <i className="fa fa-thumbs-up"></i>  25  <i className="fa fa-thumbs-down"></i> 15
@@ -12,5 +18,7 @@ const Post = (props) => (
     <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
   </div>
 )
+}
+}
 
 export default Post;

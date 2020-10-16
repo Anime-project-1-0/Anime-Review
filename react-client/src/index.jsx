@@ -14,8 +14,9 @@ class App extends React.Component {
       title :""
     }
     this.RetrieveData();
-
-this.RetrieveData = this.RetrieveData.bind(this)
+this.filter = this.filter.bind(this)
+this.handleSearch = this.handleSearch.bind(this)
+    this.RetrieveData = this.RetrieveData.bind(this)
     this.changeView = this.changeView.bind(this);
     this.addFanPost = this.addFanPost.bind(this)
   }
@@ -45,22 +46,23 @@ that.setState({data : data})
    });
   }
 
-  // filter() {
-  //   var that = this
-  //   let Arr = this.state.data
-  //   let filtered = [];
-  //   for(var i = 0 ; i < Arr.length ; i++) {
-  //     if (Arr[i].title.includes(this.state.title)) {
-  //       filtered.push(Arr[i])
-  //     }
-  //   }
-  //   that.setState({
-  //     data: filtered
-  //  })
-  // }
+  filter() {
+    console.log(e.target.value)
+    let Arr = this.state.data
+    let filtered = [];
+    for(var i = 0 ; i < Arr.length ; i++) {
+      if (Arr[i].title === this.state.title) {
+        filtered.push(Arr[i])
+      }
+    }
+    this.setState({
+      data: filtered
+   })
+  }
 
-handleSearch(){
+handleSearch(e){
   this.setState({ title: e.target.value });
+  console.log(this.state.title)
 }
 
 
@@ -71,6 +73,7 @@ handleSearch(){
   }
 
   renderView() {
+    console.log(this.state.data)
     const {view} = this.state;
 
     if (view === 'feed') {

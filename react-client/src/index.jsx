@@ -5,7 +5,6 @@ import Admin from './components/admin.jsx';
 import Post from './components/Post.jsx';
 import Feed from './components/Feed.jsx';
 
-
 class App extends React.Component {
   constructor() {
     super();

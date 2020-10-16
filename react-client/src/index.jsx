@@ -44,6 +44,21 @@ that.setState({data : data})
    });
   }
 
+  filter(type) {
+    let Arr = this.state.data
+    let filtered = [];
+    for(var i = 0 ; i < Arr.length ; i++) {
+      if (Arr[i].types.includes(type)) {
+        filtered.push(Arr[i])
+      }
+    }
+    this.setState({
+      data: filtered
+   })
+  }
+
+
+
 
   changeView(option) {
     this.setState({
@@ -55,7 +70,8 @@ that.setState({data : data})
     const {view} = this.state;
 
     if (view === 'feed') {
-      return <Feed handleClick={this.changeView}  anime={this.state.data}/>
+      return <Feed handleClick={this.changeView}  anime={this.state.data}/> 
+             
     }     else if(view === 'admin') {
       return <Admin addFanPost={this.addFanPost} /> 
     }  

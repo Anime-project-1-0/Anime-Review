@@ -10,7 +10,8 @@ class App extends React.Component {
     super();
     this.state = {
       view: 'feed',
-      data : []
+      data : [],
+      currentBlog:{}
     }
 
     this.changeView = this.changeView.bind(this);
@@ -24,6 +25,8 @@ that.setState({data : data})
 })
   }
 
+
+
   changeView(option) {
     this.setState({
       view: option
@@ -34,12 +37,12 @@ that.setState({data : data})
     const {view} = this.state;
 
     if (view === 'feed') {
-      return <Feed handleClick={() => this.changeView('anypostview')}  anime={this.state.data}/>
+      return <Feed handleClick={this.changeView}  anime={this.state.data}/>
     }     else if(view === 'admin') {
       return <Admin/>
     }  
     else {
-      return <Post />
+      return <Post anime={this.state.view}/>
     }
   }
   render() {

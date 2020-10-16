@@ -1,17 +1,55 @@
 import React from 'react';
+import {useRef} from 'react';
+import $ from 'jquery';
+
 
 class Post extends React.Component {
   constructor(props) {
     super(props)
+this.state = {
+  like : this.props.anime.like,
+  dislike : this.props.anime.dislike
+}
+this.updateLike = this.updateLike.bind(this)
+    this.updateDisLike = this.updateDisLike.bind(this);
   }
 
 
-render() {
+  updateLike(e) {
+    var that = this;
+    $.ajax({
+      url : `/api/anime/${this.props.anime._id}`,
+      method : 'PATCH',
+      contentType : 'application/json',
+      data : JSON.stringify({ id: this.props.anime._id, like: this.props.anime.like}),
+      success : function(data){
+        console.log(data)
+  that.setState({ like : data.like})
+      }
+  });
+  e.preventDefault();
+  }
 
+updateDisLike(e) {
+  var that = this;
+  $.ajax({
+    url : `/api/anime/${this.props.anime._id}`,
+    method : 'POST',
+    contentType : 'application/json',
+    data : JSON.stringify({ id: this.props.anime._id, dislike: this.props.anime.dislike}),
+    success : function(data){
+      console.log(data)
+that.setState({ dislike : data.dislike})
+    }
+});
+e.preventDefault();
+}
+
+render() {
 return (
   <div className="post">
     <h1 className="post-title">{this.props.anime.title}</h1>
-    <i className="fa fa-thumbs-up">  </i>{this.props.anime.like} <i className="fa fa-thumbs-down"></i>  {this.props.anime.dislike}
+    <button><i className="fa fa-thumbs-up" onClick={this.updateLike}></i ></button> {this.state.like} <button><i className="fa fa-thumbs-down" onClick={this.updateDisLike}></i></button>  {this.state.dislike}
     <br></br>
     <img src={this.props.anime.imageUrl}/>
     <div>{this.props.anime.description}</div>

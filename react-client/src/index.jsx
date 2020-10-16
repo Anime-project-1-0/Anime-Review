@@ -24,10 +24,10 @@ class App extends React.Component {
   RetrieveData(){
     var that = this;
     $.get('/api/anime', function(data){
-  console.log(data)
-  that.setState({Data : data})
-  })
-  }
+    // console.log(data)
+    that.setState({Data : data})
+    })
+    }
 
   addFanPost(obj){
     var that = this;
@@ -90,6 +90,7 @@ handleSearch(e){
     return (
       <div>
         <div className="nav">
+          <img className='icon' src='https://i.pinimg.com/236x/22/3b/e1/223be10eddf56372c1762931f69051a6.jpg'></img>
           <span className="logo"
             onClick={() => this.changeView('feed')}>
             Black-Ben

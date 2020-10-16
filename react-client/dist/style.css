@@ -3,13 +3,27 @@
 body {
   font-family: "PT Serif", sans-serif;
   margin: 0px;
-  color: #2c3e50;
+  color: white;
   background-color: #ecf0f1;
   font-size: 1.1em;
+  background-image: url("https://i.pinimg.com/originals/f1/6f/ed/f16fedc86686146624897737cf4338d8.jpg") ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h2 {
+  color: white;
 }
 
-h2 {
-  color: #2c3e50;
+.postImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.postText{
+  background-color: black;
 }
 
 .feed-list-item {
@@ -17,7 +31,7 @@ h2 {
   margin: 40px;
   list-style: none;
   border: 1px solid #77777769;
-  background-color: #fdfdfd;
+  background-color: transparent;
   border-radius: 4px;
   padding: 30px 50px 0px 50px;
   box-shadow: 0 0 1em #80808066;
@@ -25,8 +39,7 @@ h2 {
 
 .feed-list-item-image {
   float: left;
-  width: 100%;
-  max-width: 350px;
+  max-width: 420px;
   margin-right: 20px;
   margin-bottom: 5%;
 }
@@ -42,15 +55,7 @@ h2 {
   margin-bottom: 50px;
 }
 
-.feed-list-item-byline {
-  font-size: 0.8em;
-  margin-bottom: 15px;
-  color: #777777;
-}
 
-.feed-list-item-byline-author {
-  font-weight: bolder;
-}
 
 button {
   cursor: pointer;
@@ -67,7 +72,7 @@ button {
   max-width: 800px;
   font-size: 1.3em;
   line-height: 1.5em;
-  background-color: white;
+  background-color: transparent;
   padding: 5px 20px 5px 20px;
 }
 
@@ -76,19 +81,6 @@ button {
   line-height: 1.5em;
 }
 
-.post-image {
-  max-width: 100%;
-}
-
-.post-byline {
-  color: #777777;
-  font-size: 0.8em;
-  margin-bottom: 5%;
-}
-
-.post-byline-author {
-  font-weight: bolder;
-}
 
 .create h2 {
   border-bottom: 1px solid #777777;
@@ -99,9 +91,9 @@ button {
 .create-editor {
   width: 40%;
   float: left;
-}
+} 
 
-.create-preview {
+ .create-preview {
   width: 60%;
   float: right;
   margin: 0 auto;
@@ -170,10 +162,11 @@ button {
   width: 75%;
 }
 
-.post-list-entry:hover {
+ .post-list-entry:hover {
   cursor: pointer;
   background-color: rgba(52, 152, 219, 0.17);
-}
+ }
+
 
 .post-list-entry-title {
   font-weight: bold;

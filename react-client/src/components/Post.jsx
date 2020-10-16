@@ -49,10 +49,12 @@ render() {
 return (
   <div className="post">
     <h1 className="post-title">{this.props.anime.title}</h1>
+    <img className='postImg' src={this.props.anime.imageUrl}/>
+    <br></br>
     <button><i className="fa fa-thumbs-up" onClick={this.updateLike}></i ></button> {this.state.like} <button><i className="fa fa-thumbs-down" onClick={this.updateDisLike}></i></button>  {this.state.dislike}
     <br></br>
-    <img src={this.props.anime.imageUrl}/>
-    <div>{this.props.anime.description}</div>
+    <br></br>
+    <div className='postText' >{this.props.anime.description}</div>
   </div>
 )
 }

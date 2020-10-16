@@ -12,21 +12,30 @@ class Admin extends React.Component {
   this.handleChangeTitle = this.handleChangeTitle.bind(this);
   this.handleChangeImage = this.handleChangeImage.bind(this);
   this.handleChangeDescription = this.handleChangeDescription.bind(this);
+  this.handleSubmit = this.handleSubmit.bind(this);
 }
 
-handleChangeName(event) {
+handleChangeTitle(event) {
   this.setState({title: event.target.value});
 }
 
-handleChangeNumber(event) {
+handleChangeImage(event) {
   this.setState({imageUrl: event.target.value});
 }
 
-handleChangeImage(event) {
+handleChangeDescription(event) {
   this.setState({description: event.target.value});
 }
 
-
+handleSubmit(event) {
+  var obj = {
+    title: this.state.title,
+    imageUrl: this.state.imageUrl,
+    description: this.state.description
+  }
+  this.props.addFanPost(obj);
+    event.preventDefault();
+ }
 
 
 render (){
@@ -38,7 +47,7 @@ render (){
       <input className="create-input" type="text"  placeholder="Anime Title" onChange={this.handleChangeTitle}></input>
       <input className="create-input" type="text"  placeholder="Image URL" onChange={this.handleChangeImage} ></input>
       <textarea className="create-body-textarea"  placeholder="Description" onChange={this.handleChangeDescription}></textarea>
-      <button className="create-submit-button" type="submit">Save post</button>
+      <button className="create-submit-button" type="submit" onSubmit={this.handleSubmit}>Save post</button>
     </form>
   </div>
   <div className="create-preview">

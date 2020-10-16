@@ -51,8 +51,8 @@ return (
     <h1 className="post-title">{this.props.anime.title}</h1>
     <button><i className="fa fa-thumbs-up" onClick={this.updateLike}></i ></button> {this.state.like} <button><i className="fa fa-thumbs-down" onClick={this.updateDisLike}></i></button>  {this.state.dislike}
     <br></br>
-    <img src={this.props.anime.imageUrl}/>
-    <div>{this.props.anime.description}</div>
+    <img className="postImg" src={this.props.anime.imageUrl}/>
+    <div className='post Text'>{this.props.anime.description}</div>
   </div>
 )
 }

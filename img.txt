@@ -4,10 +4,16 @@ https://world-wire.com/wp-content/uploads/2020/07/Attack-on-Titan-1024x576.jpeg
 https://www.wallpapermaiden.com/wallpaper/16798/download/1280x720/boruto-uzumaki-naruto-akatsuki-scar-katana.png
 https://twinfinite.net/wp-content/uploads/2020/03/bleachreturn1.jpeg
 
+<<<<<<< HEAD
+{
+    "title": "NARUTO SHIPPUDEN",
+    "imageUrl": "https://live.staticflickr.com/4781/26790870608_ef842df3b4_b.jpg",
+=======
 
 {
     "title": "NARUTO SHIPPUDEN",
     "imageUrl": "https://wallpaperaccess.com/full/1346635.jp",
+>>>>>>> 40d4281758e549a022d05dbe84e8845d7f9cc5be
     "description": "Naruto: Shippuden is an anime series adapted from Part II of Masashi Kishimoto's manga series, with exactly 500 episodes. It is set two and a half years after Part I in the Naruto universe, following the ninja teenager Naruto Uzumaki and his allies. The series is directed by Hayato Date, and produced by Pierrot and TV Tokyo. It began broadcasting on February 15, 2007 on TV Tokyo, and concluded on March 23, 2017.On January 2, 2009, Viz Media and Crunchyroll provided eight uncut English subtitled Naruto: Shippuden episodes on the official Naruto website. Later on January 15, Viz began providing subtitled versions of the latest Naruto: Shippuden episodes a week after they first aired in Japan, with a new episode being added to the Naruto website each subsequent Thursday. The English dub of Naruto: Shippuden made its US premiere on Disney XD on October 28, 2009. On July 24, 2009, Viz Media announced that the series would be released on the iTunes Store. The first DVD release of the series in North America was released on September 29, 2009. Naruto: Shippuden was cancelled on Disney XD on November 5, 2011 after 98 episodes, in which the network cited more frequent violence that was shown in later episodes. DVD box sets generally containing thirteen dubbed episodes from episode 1 onward are being released quarterly in their uncut format. The English dub was streamed on the Neon Alley web channel from its launch in October 2012, and beginning December 29, 2012 with episode 99, dubbed episodes premiered every week uncut until March 25, 2016, about a month before Neon Alley's closure. Adult Swim's Toonami programming block began airing the anime from the beginning on January 5, 2014 in an uncut format and as of 2020 it is still running on a weekly basis. Toonami co-creator and current block runner Jason DeMarco has commented that the plan is to broadcast the anime in its entirety until 2024. In four regions, episodes from the series have been released on DVD and Blu-ray by single volumes and box sets. In North America, twelve single volumes and thirty eight box sets have been released. In the United Kingdom, twenty eight single volumes and six box sets have been released. In Japan, twenty six sets of volumes have been released based on which arc it represents. In Australia and New Zealand, twenty-eight collections have been released. ",
     "like": 1236,
     "dislike":64
@@ -16,7 +22,11 @@ https://twinfinite.net/wp-content/uploads/2020/03/bleachreturn1.jpeg
 
   {
     "title": "BORUTO",
+<<<<<<< HEAD
+    "imageUrl": "https://i0.wp.com/www.bgeekyblog.com/wp-content/uploads/2017/04/maxresdefault-5.jpg?resize=1280%2C720",
+=======
     "imageUrl": "https://www.wallpapermaiden.com/wallpaper/16798/download/1280x720/boruto-uzumaki-naruto-akatsuki-scar-katana.png",
+>>>>>>> 40d4281758e549a022d05dbe84e8845d7f9cc5be
     "description": "Boruto: Naruto Next Generations (Japanese: BORUTO-ボルト- -Naruto Next Generations-, Hepburn: Boruto: Naruto Nekusuto Jenerēshonzu) is a Japanese manga series written by Ukyō Kodachi and illustrated by Mikio Ikemoto. It was serialised monthly in Shueisha's shōnen manga magazine Weekly Shōnen Jump since May 2016 until it was transferred to Shueisha's monthly magazine V Jump in July 2019. Boruto is a spin-off and a sequel to Masashi Kishimoto's Naruto, which follows the exploits of Naruto Uzumaki's Son, Boruto Uzumaki, and his ninja team. Boruto originated from Shueisha's proposal to Kishimoto on making a sequel to Naruto. However, Kishimoto rejected this offer and proposed his former assistant Mikio Ikemoto to draw it; the writer of the film Boruto: Naruto the Movie, Ukyō Kodachi, created the plot. While both Kodachi and Ikemoto are in charge of the manga, Kodachi also oversees the anime's adaptation alongside Kishimoto. An anime television series adaptation directed by Noriyuki Abe started airing on TV Tokyo on 5 April 2017. Unlike the manga, which began as a retelling of the Boruto film, the anime begins as a prequel set before Boruto and his friends become ninjas in a later story arc. A series of light novels have also been written. Pierrot's anime prequel also earned praise for its use of both new and returning characters but the narrative of the manga was noted to be more serious as it focused more on the protagonist. Shueisha has shipped a million copies of the manga series as of January 2017. ",
     "like": 794,
     "dislike":45
@@ -48,7 +58,11 @@ https://twinfinite.net/wp-content/uploads/2020/03/bleachreturn1.jpeg
 
   {
     "title": "ATTACK ON TITAN",
+<<<<<<< HEAD
+    "imageUrl": "https://i2.wp.com/www.whatsageek.com/wp-content/uploads/2015/07/2a4384bfd81aede7c5915631f8f781a4.jpg?fit=640%2C335&ssl=1&resize=1280%2C720",
+=======
     "imageUrl": "https://world-wire.com/wp-content/uploads/2020/07/Attack-on-Titan-1024x576.jpeg",
+>>>>>>> 40d4281758e549a022d05dbe84e8845d7f9cc5be
     "description": "Attack on Titan (Japanese: 進撃の巨人, Hepburn: Shingeki no Kyojin, lit. 'The Advancing Giant[s]') is a Japanese manga series written and illustrated by Hajime Isayama. It is set in a world where humanity lives within cities surrounded by enormous walls that protect them from gigantic man-eating humanoids referred to as Titans; the story follows Eren Yeager, who vows to retake the world after a Titan brings about the destruction of his home town and the death of his mother. Attack on Titan has been serialized in Kodansha's monthly Bessatsu Shōnen Magazine since September 2009, and collected into 32 tankōbon volumes as of September 2020. An anime television series adapting the manga was produced by Wit Studio (seasons 1–3) and MAPPA (season 4). A 25-episode first season was broadcast from April to September 2013, followed by a 12-episode second season broadcast from April to June 2017. A 22-episode third season was broadcast in two parts, with the first 12 episodes airing from July to October 2018 and the last 10 episodes airing from April to July 2019. A fourth and final season is scheduled to premiere in December 2020.  Attack on Titan has become a critical and commercial success. As of December 2019, the manga has over 100 million tankōbon copies in print worldwide, making it one of the best-selling manga series of all time. It has won several awards, including the Kodansha Manga Award, the Micheluzzi Award, and Harvey Award. The anime series has also been well received by critics, with the first three seasons being met with praise for their story, animation, music and voice acting, thus boosting the series' popularity in U.S. and Asia. Although it has gained significant fame and popularity in Japan's neighbouring countries, political interpretations of the series have caused controversies in China and South Korea. ",
     "like": 540,
     "dislike":12
@@ -60,4 +74,19 @@ https://twinfinite.net/wp-content/uploads/2020/03/bleachreturn1.jpeg
    "description": "Bleach (stylized as BLEACH) is a Japanese anime television series based on Tite Kubo's manga of the same name. It was produced by Studio Pierrot and directed by Noriyuki Abe. The series aired on TV Tokyo from October 2004 to March 2012, spanning 366 episodes. The story follows the adventures of Ichigo Kurosaki after he obtains the powers of a Soul Reaper—a death personification similar to the Grim Reaper—from another Soul Reaper, Rukia Kuchiki. His newfound powers force him to take on the duties of defending humans from evil spirits and guiding departed souls to the afterlife. The anime adaptation includes original storylines not found in the manga with repeated appearances and stories containing these original characters. Viz Media obtained foreign television and home video distribution rights to the Bleach anime in March 2006. Bleach was broadcast in the United States on Adult Swim from September 2006 to January 2015. The series' international release extends through dozens of countries in several languages, such as Spanish, French, German, Brazilian Portuguese and Tagalog. In March 2020, it was announced that the manga's final story arc, 'Thousand-Year Blood War', would receive an anime adaptation. ",
     "like": 479,
     "dislike":2
+<<<<<<< HEAD
+  }
+
+  {
+    "title": "High School DxD:",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BYjhlYWI2MGUtNjk4ZS00OWJjLWJiZTEtYWYxNTY5MzVhYzI0XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR96,0,630,1200_AL_.jpg",
+   "description": "High School DxD (Japanese: ハイスクールD×D, Hepburn: Haisukūru Dī Dī, alternatively written as Highschool DxD) is a Japanese light novel series written by Ichiei Ishibumi and illustrated by Miyama-Zero. The story centers on Issei Hyodo, a perverted high school student from Kuoh Academy who desires to be a harem king and is killed by his first date, 
+   revealed to be a fallen angel, but is later revived as a devil by Rias Gremory to serve her and her devil family. Issei's deepening relationship with Rias proves dangerous to the angels, the fallen angels, and the devils.
+    High School DxD began serialization in Fujimi Shobo's Dragon Magazine in its September 2008 issue. The first volume was released on September 20, 2008. A total of twenty five volumes is available in Japan as of March 2018 under their Fujimi Fantasia Bunko imprint. A manga adaptation by Hiroji Mishima began serialization in the July 2010 issue of Dragon Magazine and later in the March 2011 issue of Monthly Dragon Age with twenty-two volumes currently available as of September 2016.
+    An anime adaptation by TNK aired on AT-X and other networks from January 6, 2012 to March 23, 2012. The anime is licensed in North America by Funimation, in the United Kingdom by Manga Entertainment, and in Australia by Madman Entertainment. A second season called High School DxD New (ハイスクールD×D NEW, Haisukūru Dī Dī Nyū) aired from July 7, 2013, to September 22, 2013. A third season called High School DxD BorN 
+    (ハイスクールD×D BorN, Haisukūru Dī Dī Bōn) aired from April 4, 2015 to June 20, 2015. A fourth season called High School DxD Hero (ハイスクールD×D Hero, Haisukūru Dī Dī Hīrō) aired from April 10, 2018 to July 3, 2018.",
+    "like": 420,
+    "dislike":69
+=======
+>>>>>>> 40d4281758e549a022d05dbe84e8845d7f9cc5be
   }

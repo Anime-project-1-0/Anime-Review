@@ -20,7 +20,7 @@ class App extends React.Component {
   componentDidMount(){
     var that = this;
 $.get('/api/anime', function(data){
-  console.log(data)
+  // console.log(data)
 that.setState({data : data})
 })
   }

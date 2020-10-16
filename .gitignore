@@ -1,2 +1,6 @@
 node_modules
+<<<<<<< HEAD
 bundle.js
+=======
+react-client\dist\bundle.js
+>>>>>>> HamdiBenKahla

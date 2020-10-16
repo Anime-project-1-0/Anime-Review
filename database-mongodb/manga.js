@@ -1,7 +1,7 @@
 const db  = require('./index.js');
 const Anime = require('./Anime.js');
 
-const manga = [
+const data = [
   {
     title: 'NARUTO SHIPPUDEN',
     imageUrl: 'https://lh3.googleusercontent.com/proxy/2hcyOadMW9F3QXYdEyC4R88NH2BEcvURDiBNyaz45ZWCiGA-fE9-O3ePkGhkPPwGMTIBREGrIrOUTdUA8wiKuuBcEgJ9BjuSXTEdSHKnCP-aeg8wAXwTRRJ3Jj9MsgdVQZI',
@@ -67,10 +67,24 @@ const manga = [
   }
 ]
 
-const insertSampleBlogs = function() {
-  Anime.create(manga)
-  console.log(manga)
-    .then(() => db.disconnect());
+var insertAll = function(data) {
+	for(var i = 0 ; i < data.length ; i++){
+		var Obj = {
+			title: data[i].title,
+			imageUrl: data[i].imageUrl,
+			description: data[i].description,
+      like : data[i].like,
+      dislike:data[i].dislike
+		}
+		var item = new db(Obj);
+		item.save(function (err, save) {
+			if (err) {
+				console.log("there is error saving");
+			} else {
+				console.log('saved');
+			}
+		});
+	}
 };
 
-insertSampleBlogs();
+insertAll();;

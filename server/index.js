@@ -22,10 +22,18 @@ app.post('/api/anime',(req,res)=>{
 
 app.get('/api/anime', function(req, res) {
   Anime.find().then( results => {
-    res.json(results);
-    
+    res.json(results);   
   }).catch(err => console.log(err)) 
+});
 
+app.post('/api/anime', (req, res) => {
+  // delete req.body._id;
+  const thing = new Anime({
+    ...req.body
+  });
+  thing.save()
+    .then(() => res.status(201).json({ message: 'created'}))
+    .catch(error => res.status(400).json({ error }));
 });
 
 app.listen(PORT, () => {

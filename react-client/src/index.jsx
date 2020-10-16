@@ -32,7 +32,7 @@ that.setState({data : data})
     $.ajax({
      url: '/api/anime',
      method: 'POST',
-     data: obj
+     data: JSON.stringify(obj)
    })
    .done (function (data) {
      console.log('Data sent');

@@ -47,7 +47,7 @@ render (){
       <input className="create-input" type="text"  placeholder="Anime Title" onChange={this.handleChangeTitle}></input>
       <input className="create-input" type="text"  placeholder="Image URL" onChange={this.handleChangeImage} ></input>
       <textarea className="create-body-textarea"  placeholder="Description" onChange={this.handleChangeDescription}></textarea>
-      <button className="create-submit-button" type="submit" onSubmit={this.handleSubmit}>Save post</button>
+      <button className="create-submit-button" type="submit" onClick={this.handleSubmit}>Save post</button>
     </form>
   </div>
   <div className="create-preview">

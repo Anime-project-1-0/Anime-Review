@@ -14,11 +14,12 @@ class App extends React.Component {
       data : [],
       currentBlog:{}
     }
-
+    this.RetrieveData();
+this.RetrieveData = this.RetrieveData.bind(this)
     this.changeView = this.changeView.bind(this);
   }
 
-  componentDidMount(){
+  RetrieveData(){
     var that = this;
 $.get('/api/anime', function(data){
   console.log(data)
@@ -26,6 +27,22 @@ that.setState({data : data})
 })
   }
 
+  addFanPost(obj){
+    var that = this;
+    console.log('Add fan post Function',obj)
+    $.ajax({
+     url: '/api/anime',
+     method: 'POST',
+     data: obj
+   })
+   .done (function (data) {
+     console.log('Data sent');
+     that.RetrieveData()
+   })
+   .fail(function( jqXHR, textStatus ) {
+     alert( "Request failed: " + textStatus );
+   });
+  }
 
 
   changeView(option) {

@@ -6,7 +6,7 @@ class Post extends React.Component {
   }
 
 render() {
-  console.log(this.props.anime)
+
 return (
   <div className="post">
     <h1 className="post-title">{this.props.anime.title}</h1>

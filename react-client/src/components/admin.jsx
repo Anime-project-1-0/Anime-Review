@@ -1,15 +1,43 @@
 import React from 'react';
 
 
-const Admin = (props) => (
+class Admin extends React.Component {
+	constructor(props) {
+    	super(props);
+    	this.state = {
+    		title: '',
+    		imageUrl: '',
+    		description: ''	
+      }
+  this.handleChangeTitle = this.handleChangeTitle.bind(this);
+  this.handleChangeImage = this.handleChangeImage.bind(this);
+  this.handleChangeDescription = this.handleChangeDescription.bind(this);
+}
+
+handleChangeName(event) {
+  this.setState({title: event.target.value});
+}
+
+handleChangeNumber(event) {
+  this.setState({imageUrl: event.target.value});
+}
+
+handleChangeImage(event) {
+  this.setState({description: event.target.value});
+}
+
+
+
+
+render (){
+  return (
 <div className="create">
   <div className="create-editor">
     <h2>AUTHOR</h2>
     <form>
-      <input className="create-input" type="text"  placeholder="Post Title"></input>
-      <input className="create-input" type="text"  placeholder="Author"></input>
-      <input className="create-input" type="text"  placeholder="Image URL"></input>
-      <textarea className="create-body-textarea"  placeholder="Post Body"></textarea>
+      <input className="create-input" type="text"  placeholder="Anime Title" onChange={this.handleChangeTitle}></input>
+      <input className="create-input" type="text"  placeholder="Image URL" onChange={this.handleChangeImage} ></input>
+      <textarea className="create-body-textarea"  placeholder="Description" onChange={this.handleChangeDescription}></textarea>
       <button className="create-submit-button" type="submit">Save post</button>
     </form>
   </div>
@@ -18,5 +46,7 @@ const Admin = (props) => (
   </div>
 </div>
 )
+  }
+}
 
 export default Admin;

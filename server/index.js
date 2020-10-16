@@ -28,6 +28,7 @@ app.get('/api/anime', function(req, res) {
 
 app.post('/api/anime', (req, res) => {
   // delete req.body._id;
+  console.log(req.body)
   const thing = new Anime({
     ...req.body
   });

@@ -16,12 +16,13 @@ class App extends React.Component {
     this.RetrieveData();
 this.RetrieveData = this.RetrieveData.bind(this)
     this.changeView = this.changeView.bind(this);
+    this.addFanPost = this.addFanPost.bind(this)
   }
 
   RetrieveData(){
     var that = this;
 $.get('/api/anime', function(data){
-  // console.log(data)
+  console.log(data)
 that.setState({data : data})
 })
   }
@@ -32,16 +33,31 @@ that.setState({data : data})
     $.ajax({
      url: '/api/anime',
      method: 'POST',
-     data: JSON.stringify(obj)
+     data: obj
    })
    .done (function (data) {
      console.log('Data sent');
-     that.RetrieveData()
+     that.RetrieveData();
    })
    .fail(function( jqXHR, textStatus ) {
      alert( "Request failed: " + textStatus );
    });
   }
+
+  filter(type) {
+    let Arr = this.state.data
+    let filtered = [];
+    for(var i = 0 ; i < Arr.length ; i++) {
+      if (Arr[i].types.includes(type)) {
+        filtered.push(Arr[i])
+      }
+    }
+    this.setState({
+      data: filtered
+   })
+  }
+
+
 
 
   changeView(option) {
@@ -54,9 +70,10 @@ that.setState({data : data})
     const {view} = this.state;
 
     if (view === 'feed') {
-      return <Feed handleClick={this.changeView}  anime={this.state.data}/>
+      return <Feed handleClick={this.changeView}  anime={this.state.data}/> 
+             
     }     else if(view === 'admin') {
-      return <Admin/>
+      return <Admin addFanPost={this.addFanPost} /> 
     }  
     else {
       return <Post anime={this.state.view}/>

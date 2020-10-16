@@ -11,10 +11,12 @@ class App extends React.Component {
     this.state = {
       view: 'feed',
       data : [],
-      currentBlog:{}
+      title :""
     }
     this.RetrieveData();
-this.RetrieveData = this.RetrieveData.bind(this)
+this.filter = this.filter.bind(this)
+this.handleSearch = this.handleSearch.bind(this)
+    this.RetrieveData = this.RetrieveData.bind(this)
     this.changeView = this.changeView.bind(this);
     this.addFanPost = this.addFanPost.bind(this)
   }
@@ -44,11 +46,12 @@ that.setState({data : data})
    });
   }
 
-  filter(type) {
+  filter() {
+    console.log(e.target.value)
     let Arr = this.state.data
     let filtered = [];
     for(var i = 0 ; i < Arr.length ; i++) {
-      if (Arr[i].types.includes(type)) {
+      if (Arr[i].title === this.state.title) {
         filtered.push(Arr[i])
       }
     }
@@ -57,7 +60,10 @@ that.setState({data : data})
    })
   }
 
-
+handleSearch(e){
+  this.setState({ title: e.target.value });
+  console.log(this.state.title)
+}
 
 
   changeView(option) {
@@ -67,6 +73,7 @@ that.setState({data : data})
   }
 
   renderView() {
+    console.log(this.state.data)
     const {view} = this.state;
 
     if (view === 'feed') {
@@ -87,11 +94,17 @@ that.setState({data : data})
             onClick={() => this.changeView('feed')}>
             Black-Ben
           </span>
+          <form>
+      <input
+        type='text' onChange={this.handleSearch}
+      />
+       <input type="submit" value="search" onSubmit={this.filter}></input>
+      </form>
           <span className={this.state.view === 'feed'
             ? 'nav-selected'
             : 'nav-unselected'}
             onClick={() => this.changeView('feed')}>
-            See all Posts
+            Feed
           </span>
           <span className="nav-unselected" onClick={() => this.changeView('admin')}>
             Admin

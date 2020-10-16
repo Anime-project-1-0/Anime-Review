@@ -5,7 +5,6 @@ import Admin from './components/admin.jsx';
 import Post from './components/Post.jsx';
 import Feed from './components/Feed.jsx';
 
-
 class App extends React.Component {
   constructor() {
     super();
@@ -22,7 +21,7 @@ this.RetrieveData = this.RetrieveData.bind(this)
   RetrieveData(){
     var that = this;
 $.get('/api/anime', function(data){
-  console.log(data)
+  // console.log(data)
 that.setState({data : data})
 })
   }
@@ -33,7 +32,7 @@ that.setState({data : data})
     $.ajax({
      url: '/api/anime',
      method: 'POST',
-     data: obj
+     data: JSON.stringify(obj)
    })
    .done (function (data) {
      console.log('Data sent');

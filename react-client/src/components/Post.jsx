@@ -23,8 +23,8 @@ this.updateLike = this.updateLike.bind(this)
       contentType : 'application/json',
       data : JSON.stringify({ id: this.props.anime._id, like: this.props.anime.like}),
       success : function(data){
-        console.log(data)
-  that.setState({ like : data.like})
+      // console.log(data)
+      that.setState({ like : data.like})
       }
   });
   e.preventDefault();
@@ -38,8 +38,8 @@ updateDisLike(e) {
     contentType : 'application/json',
     data : JSON.stringify({ id: this.props.anime._id, dislike: this.props.anime.dislike}),
     success : function(data){
-      console.log(data)
-that.setState({ dislike : data.dislike})
+    // console.log(data)
+    that.setState({ dislike : data.dislike})
     }
 });
 e.preventDefault();

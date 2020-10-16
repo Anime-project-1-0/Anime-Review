@@ -6,16 +6,16 @@ import Post from './components/Post.jsx';
 import Feed from './components/Feed.jsx';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       view: 'feed',
-      data : [],
-      title :""
+      Data : [],
+      title :''
     }
     this.RetrieveData();
-this.filter = this.filter.bind(this)
-this.handleSearch = this.handleSearch.bind(this)
+    this.filter = this.filter.bind(this)
+    this.handleSearch = this.handleSearch.bind(this)
     this.RetrieveData = this.RetrieveData.bind(this)
     this.changeView = this.changeView.bind(this);
     this.addFanPost = this.addFanPost.bind(this)
@@ -23,11 +23,11 @@ this.handleSearch = this.handleSearch.bind(this)
 
   RetrieveData(){
     var that = this;
-$.get('/api/anime', function(data){
-  console.log(data)
-that.setState({data : data})
-})
-  }
+    $.get('/api/anime', function(data){
+    // console.log(data)
+    that.setState({Data : data})
+    })
+    }
 
   addFanPost(obj){
     var that = this;
@@ -46,23 +46,24 @@ that.setState({data : data})
    });
   }
 
-  filter() {
-    console.log(e.target.value)
-    let Arr = this.state.data
-    let filtered = [];
+  filter(e) {    
+    var Arr = this.state.Data
+    console.log(Arr.length)
+    var filtered = [];
     for(var i = 0 ; i < Arr.length ; i++) {
       if (Arr[i].title === this.state.title) {
         filtered.push(Arr[i])
       }
     }
     this.setState({
-      data: filtered
-   })
+      Data: filtered
+   });
+   e.preventDefault();
   }
 
 handleSearch(e){
   this.setState({ title: e.target.value });
-  console.log(this.state.title)
+  
 }
 
 
@@ -72,12 +73,11 @@ handleSearch(e){
     });
   }
 
-  renderView() {
-    console.log(this.state.data)
+  renderView() {   
     const {view} = this.state;
 
     if (view === 'feed') {
-      return <Feed handleClick={this.changeView}  anime={this.state.data}/> 
+      return <Feed handleClick={this.changeView}  anime={this.state.Data}/> 
              
     }     else if(view === 'admin') {
       return <Admin addFanPost={this.addFanPost} /> 
@@ -90,6 +90,7 @@ handleSearch(e){
     return (
       <div>
         <div className="nav">
+          <img className='icon' src='https://i.pinimg.com/236x/22/3b/e1/223be10eddf56372c1762931f69051a6.jpg'></img>
           <span className="logo"
             onClick={() => this.changeView('feed')}>
             Black-Ben
@@ -98,7 +99,7 @@ handleSearch(e){
       <input
         type='text' onChange={this.handleSearch}
       />
-       <input type="submit" value="search" onSubmit={this.filter}></input>
+       <input type="submit" value="search" onClick={this.filter}></input>
       </form>
           <span className={this.state.view === 'feed'
             ? 'nav-selected'

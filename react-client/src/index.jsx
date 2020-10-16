@@ -14,7 +14,7 @@ class App extends React.Component {
       title :""
     }
     this.RetrieveData();
-    this.filter = this.filter.bind(this)
+
 this.RetrieveData = this.RetrieveData.bind(this)
     this.changeView = this.changeView.bind(this);
     this.addFanPost = this.addFanPost.bind(this)

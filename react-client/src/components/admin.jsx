@@ -31,7 +31,9 @@ handleSubmit(event) {
   var obj = {
     title: this.state.title,
     imageUrl: this.state.imageUrl,
-    description: this.state.description
+    description: this.state.description,
+    like : 0,
+    dislike :0
   }
   this.props.addFanPost(obj);
     event.preventDefault();

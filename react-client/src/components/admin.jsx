@@ -8,8 +8,26 @@ class Admin extends React.Component {
     		title: '',
     		imageUrl: '',
     		description: ''	
-      };
+      }
+  this.handleChangeTitle = this.handleChangeTitle.bind(this);
+  this.handleChangeImage = this.handleChangeImage.bind(this);
+  this.handleChangeDescription = this.handleChangeDescription.bind(this);
 }
+
+handleChangeName(event) {
+  this.setState({title: event.target.value});
+}
+
+handleChangeNumber(event) {
+  this.setState({imageUrl: event.target.value});
+}
+
+handleChangeImage(event) {
+  this.setState({description: event.target.value});
+}
+
+
+
 
 render (){
   return (
